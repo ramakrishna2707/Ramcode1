@@ -1,0 +1,31 @@
+package Ramlogin;
+import java.util.Scanner;
+public class Oddnum {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		        Scanner scanner = new Scanner(System.in);
+
+		        System.out.print("Input number of terms: ");
+		        int n = scanner.nextInt();
+
+		        scanner.close();
+
+		        int sum = 0;
+		        int count = 0;
+
+		        System.out.print("The odd numbers are: ");
+		        for (int i = 1; count < n; i += 2) {
+		            if (count > 0) {
+		                System.out.print(",");
+		            }
+		            System.out.print(i);
+		            sum += i;
+		            count++;
+		        }
+
+		        System.out.println();
+		        System.out.println("The Sum of odd Natural Number up to " + n + " terms is: " + sum);
+		    }
+	}
+

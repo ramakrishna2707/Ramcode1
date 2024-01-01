@@ -1,0 +1,56 @@
+package Ramlogin;
+import java.util.Scanner;
+public class Daytestdata {
+
+	public static void main(String[] args) {
+
+		        Scanner scanner = new Scanner(System.in);
+
+		        System.out.print("Input a month number: ");
+		        int month = scanner.nextInt();
+
+		        System.out.print("Input a year: ");
+		        int year = scanner.nextInt();
+
+		        scanner.close();
+
+		        int daysInMonth = getDaysInMonth(month, year);
+		        String monthName = getMonthName(month);
+
+		        if (daysInMonth != -1) {
+		            System.out.println(monthName + " " + year + " has " + daysInMonth + " days");
+		        } else {
+		            System.out.println("Invalid month input. Please enter a valid month number (1-12).");
+		        }
+		    }
+
+		    public static int getDaysInMonth(int month, int year) {
+		        if (month < 1 || month > 12) {
+		            return -1; // Invalid month
+		        }
+
+		        switch (month) {
+		            case 4:
+		            case 6:
+		            case 9:
+		            case 11:
+		                return 30;
+		            case 2:
+		                return (isLeapYear(year)) ? 29 : 28;
+		            default:
+		                return 31;
+		        }
+		    }
+
+		    public static boolean isLeapYear(int year) {
+		        return (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
+		    }
+
+		    public static String getMonthName(int month) {
+		        String[] monthNames = {
+		            "January", "February", "March", "April", "May", "June",
+		            "July", "August", "September", "October", "November", "December"
+		        };
+		        return monthNames[month - 1];
+		    }
+	}

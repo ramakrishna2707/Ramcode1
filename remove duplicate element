@@ -1,0 +1,35 @@
+package Ramlogin;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+public class Remodup {
+
+	public static void main(String[] args) {
+		        List<Integer> originalList = new ArrayList<>();
+		        originalList.add(1);
+		        originalList.add(2);
+		        originalList.add(2);
+		        originalList.add(3);
+		        originalList.add(4);
+		        originalList.add(4);
+		        originalList.add(5);
+
+		        List<Integer> uniqueList = removeDuplicates(originalList);
+
+		        System.out.println("Original List: " + originalList);
+		        System.out.println("List with Duplicates Removed: " + uniqueList);
+		    }
+
+		    public static <T> List<T> removeDuplicates(List<T> list) {
+		        HashSet<T> uniqueSet = new HashSet<>();
+		        List<T> uniqueList = new ArrayList<>();
+
+		        for (T element : list) {
+		            if (uniqueSet.add(element)) {
+		                uniqueList.add(element);
+		            }
+		        }
+
+		        return uniqueList;
+		    }
+	}

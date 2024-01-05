@@ -1,0 +1,44 @@
+package com.example.array;
+
+import java.util.Scanner;
+
+public class calc {
+
+	public static void main(String[] args) {
+		    char operator;
+		    int num1, num2, op;
+		    Scanner input = new Scanner(System.in);
+		    System.out.println("Choose an operator:");
+		    operator = input.next().charAt(0);
+		    System.out.println("Enter first number:");
+		    num1 = input.nextInt();
+		    System.out.println("Enter second number:");
+		    num2 = input.nextInt();
+
+		    switch (operator) {
+		      case '+':
+		        op = num1 + num2;
+		        System.out.println(num1 + " + " + num2 + " = " + op);
+		        break;
+		      case '-':
+		        op = num1 - num2;
+		        System.out.println(num1 + " - " + num2 + " = " + op);
+		        break;
+		      case '*':
+		        op = num1 * num2;
+		        System.out.println(num1 + " * " + num2 + " = " + op);
+		        break;
+		      case '/':
+		        op = num1 / num2;
+		        System.out.println(num1 + " / " + num2 + " = " + op);
+		        break;
+
+		      default:
+		        System.out.println("default operator");
+		        break;
+		    }
+
+		    
+		  }
+		
+	}

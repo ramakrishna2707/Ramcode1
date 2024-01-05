@@ -1,0 +1,29 @@
+package com.example.array;
+
+ class Singleinheri1 {
+	void inheri() {
+		System.out.println("welcome");
+	}
+}
+	class animal extends Singleinheri1 {
+		void anim() {
+			System.out.println("dog");
+		}
+	}
+	 class student extends animal {
+			void stud() {
+				System.out.println("boys");
+			}
+		}
+		
+	public class Singleinheri  {
+	public static void main(String[] args) {
+        student a=new student();
+        a.inheri();
+        a.anim();
+        a.stud();
+
+	}
+				
+	}
+			

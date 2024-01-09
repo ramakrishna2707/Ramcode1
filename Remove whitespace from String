@@ -1,0 +1,22 @@
+package Ramlogin;
+
+public class removewhitespace {
+
+	public static void main(String[] args) {
+		String str="Java Tutorial";               
+//		String nospace=str.replaceAll("\s", "");                               //using in build method
+//		System.out.println(nospace);
+		char[]strArray=str.toCharArray();                                       //using not in build method
+		StringBuffer sb=new StringBuffer();
+		for(int i=0;i<strArray.length;i++) {
+			if((strArray[i]!=' ')&&(strArray[i]!='\t')){
+				sb.append(strArray[i]);
+			}
+		}
+		
+		String nospace1=sb.toString();
+		System.out.println(nospace1);
+		
+	}
+
+}

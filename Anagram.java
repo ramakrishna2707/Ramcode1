@@ -5,8 +5,7 @@ public class Anagram {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
        String a="act";
-       String b="c"
-       		+ "at";
+       String b="cat";
        char[]a1=a.toCharArray();
        char[]b1=b.toCharArray();
        int count=0;
